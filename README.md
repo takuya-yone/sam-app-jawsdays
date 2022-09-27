@@ -132,5 +132,8 @@ Next, you can use AWS Serverless Application Repository to deploy ready to use A
 
 ## Commands
 ```bash
-sam sync --stack-name {stack-name} --watch
+sam sync --stack-name sam-app-jawsdays --watch
+```
+```bash
+sam logs --stack-name sam-app-jawsdays --tail
 ```
