@@ -1,4 +1,6 @@
 import json
+import uuid
+
 from aws_lambda_powertools import Logger
 from aws_lambda_powertools import Tracer
 from aws_lambda_powertools import Metrics
@@ -16,13 +18,14 @@ metrics = Metrics(
 def lambda_handler(event, context):
 
     # Powertools Logger
-    logger.info('aiueo')
+    # logger.info(uuid.uuid4())
+    print(uuid.uuid4())
 
     # Add Metic
-    metrics.add_metric(
-        name="CallCount",
-        unit=MetricUnit.Count,
-        value=1)
+    # metrics.add_metric(
+    #     name="CallCount",
+    #     unit=MetricUnit.Count,
+    #     value=1)
 
     # Return Response
     return {
