@@ -18,19 +18,13 @@ metrics = Metrics(
 def lambda_handler(event, context):
 
     # Powertools Logger
-    # logger.info(uuid.uuid4())
-    print(uuid.uuid4())
+    logger.info(uuid.uuid4())
 
     # Add Metic
-    # metrics.add_metric(
-    #     name="CallCount",
-    #     unit=MetricUnit.Count,
-    #     value=1)
+    metrics.add_metric(
+        name="CallCount",
+        unit=MetricUnit.Count,
+        value=1)
 
     # Return Response
-    return {
-        "statusCode": 200,
-        "body": json.dumps({
-            "message": "hello world",
-        }),
-    }
+    return None
